@@ -16,7 +16,7 @@ type EmailAccount struct {
 
 func GetEmailAccountList() ([]EmailAccount,error){
 	result := make([]EmailAccount,0)
-	db,_:=sql.Open("mysql","root:Hhl@0048@(127.0.0.1:3306)/TicketsMem")
+	db,_:=sql.Open("mysql","root:****@(127.0.0.1:3306)/TicketsMem")
 	err:=db.Ping()
 	if err!=nil{
 		fmt.Println("Error occured during connecting db.")

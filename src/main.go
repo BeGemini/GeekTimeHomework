@@ -12,4 +12,5 @@ func main(){
 			fmt.Println(email.ID,email.Email)
 		}
 	}
+	fmt.Println("Done")
 }
