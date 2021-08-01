@@ -27,7 +27,7 @@ func GetEmailAccountList() ([]EmailAccount,error){
 	var Email string
 	for rows.Next(){
 		rows.Scan(&ID,&Email)
-		result = append(result,EmailAccount{ID: ID,Email: Email})
+		result = append(result, EmailAccount{ID: ID,Email: Email})
 	}
 	return result,rows.Err()
 }
