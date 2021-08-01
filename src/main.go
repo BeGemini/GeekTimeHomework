@@ -1,16 +1,8 @@
 package main
 
-import (
-	Persistence2 "GeekTimeHomework/src/Week2/Persistence"
-	"fmt"
-)
+import "GeekTimeHomework/src/Week3"
 
-func main(){
-	emails,err := Persistence2.GetEmailAccountList()
-	if err!=nil{
-		for _,email := range emails{
-			fmt.Println(email.ID,email.Email)
-		}
-	}
-	fmt.Println("Done")
+func main() {
+	//Week2.Do()
+	Week3.Do()
 }
