@@ -6,5 +6,4 @@ type bucket struct {
 	timeout     int64
 	rejection   int64
 	windowStart int64
-	cap         int // how long the bucket mean
 }
