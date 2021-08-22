@@ -42,6 +42,9 @@ func (e *RollingNumber) Increase(event Event) {
 	if int(index) > e.tail {
 		e.tail += 1
 	}
+	if e.buckets[index].windowStart == 0 {
+		e.buckets[index].windowStart = currentTime
+	}
 	switch event {
 	case Success:
 		e.buckets[index].success += 1
