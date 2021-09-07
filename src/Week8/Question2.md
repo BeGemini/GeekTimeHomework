@@ -3,7 +3,7 @@
 ## 数据准备
 
 `batch1.txt`，`batch2.txt` 为准备数据
-使用命令批量 `SET` 数据：
+使用命令批量 `SET` 数据：
 
 ```bash
 cat batch1.txt | ./redis-cli
