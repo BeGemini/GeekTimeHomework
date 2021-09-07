@@ -89,7 +89,7 @@ GET: 55586.44 requests per second, p50=0.455 msec
 
 ### 生成曲线图
 
-![image-20210906084434640](https://raw.githubusercontent.com/BeGemini/PicBed/main/img/20210906084445.png?token=AIJHON4NZQNRCJ77GCTIGI3BGVSLW)
+![image-20210906084434640](https://github.com/BeGemini/PicBed/blob/main/img/20210906084445.png)
 
 ### 结论
 
