@@ -1,33 +1,39 @@
 package Week9
 
 import (
+	"fmt"
 	"io"
-	"log"
 	"net"
 )
 
-func Start() {
-	listenner, err := net.Listen("tcp", "127.0.0.1:8866")
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer listenner.Close()
+func handleConn(c net.Conn) {
+	defer c.Close()
 	for {
-		con, err := listenner.Accept()
+		// read from the connection
+		var data = make([]byte, 5)
+		n, err := c.Read(data)
+		if err != nil && err != io.EOF {
+			fmt.Println("Error occurred during reading from connection,", err)
+		}
+		if n > 0 {
+			fmt.Println("received msg from client, the msg is ", string(data[:n]), "the length of msg is ", n)
+		}
+		// write to the connection
+
+	}
+}
+
+func StartWithSticky() {
+	l, err := net.Listen("tcp", "127.0.0.1:8866")
+	if err != nil {
+		fmt.Println("Error occurred during listen:", err)
+		return
+	}
+	for {
+		c, err := l.Accept()
 		if err != nil {
-			log.Println(err)
-			continue
+			fmt.Println("Error occurred during accepting,", err)
 		}
-		defer con.Close()
-		for {
-			var data = make([]byte, 5)
-			n, err := con.Read(data)
-			if err != nil && err != io.EOF {
-				log.Println(err)
-			}
-			if n > 0 {
-				log.Println("received msg,", n, "bytes:", string(data[:n]))
-			}
-		}
+		go handleConn(c)
 	}
 }
