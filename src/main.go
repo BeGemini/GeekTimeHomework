@@ -1,10 +1,11 @@
 package main
 
-import "GeekTimeHomework/src/Week9"
+import "GeekTimeHomework/src/Week9/Delimiter"
 
 func main() {
 	//Week2.Do()
 	//Week3.Do()
 	//Week9.StartWithSticky()
-	Week9.StartWithFixLength()
+	//FixLength.StartWithFixLength()
+	Delimiter.StartWithDelimiter()
 }

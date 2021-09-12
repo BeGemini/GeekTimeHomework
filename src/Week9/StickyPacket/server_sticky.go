@@ -1,4 +1,4 @@
-package Week9
+package StickyPacket
 
 import (
 	"fmt"

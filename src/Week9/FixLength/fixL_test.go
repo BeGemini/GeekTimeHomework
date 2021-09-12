@@ -1,4 +1,4 @@
-package Week9
+package FixLength
 
 import (
 	"log"

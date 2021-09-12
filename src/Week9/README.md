@@ -31,10 +31,36 @@ received msg from client, the msg is  a2bbb the length of msg is  5
 
 server_fixL.go 和 ficL_test.go 为实现代码
 
+实现效果
+```bash
+received msg from client, the msg is  1aaaa the length of msg is  1000
+received msg from client, the msg is  1bbbbb the length of msg is  1000
+received msg from client, the msg is  2aaaa the length of msg is  1000
+received msg from client, the msg is  2bbbbb the length of msg is  1000
+received msg from client, the msg is  3aaaa the length of msg is  1000
+received msg from client, the msg is  3bbbbb the length of msg is  1000
+```
+
 ### Delimiter Based
 
 > 以特殊字符结尾
 
 server_delimiter.go 为代码实现
+
+实现效果
+```bash
+received msg from client, the msg is  1aaaa
+ the length of msg is  6
+received msg from client, the msg is  1bbbbb
+ the length of msg is  7
+received msg from client, the msg is  2aaaa
+ the length of msg is  6
+received msg from client, the msg is  2bbbbb
+ the length of msg is  7
+received msg from client, the msg is  3aaaa
+ the length of msg is  6
+received msg from client, the msg is  3bbbbb
+ the length of msg is  7
+```
 
 ### Length field based frame decoder
