@@ -22,6 +22,6 @@ func encoder(msg string) []byte {
 }
 
 func TestDecoder(t *testing.T) {
-	msg := ""
+	msg := "test goim decoder..."
 	decoder(encoder(msg))
 }

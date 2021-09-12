@@ -17,3 +17,19 @@ Operation:
 
 Sequence:
 - 按请求、响应对应递增 Id
+
+编码实现：
+Goim/encoder
+
+解码实现：
+Goim/decoder
+
+效果：
+```bash
+packageLen:36
+headerLen:16
+version:1
+operation:3
+sequence:10086
+body:test goim decoder...
+```
