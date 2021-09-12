@@ -29,7 +29,10 @@ received msg from client, the msg is  a2bbb the length of msg is  5
 
 > client 和 server 规定固定大小的缓冲区，当字符长度不够时使用空字符弥补
 
-server_fixL.go 和 ficL_test.go 为实现代码
+实现代码：
+
+FixLength/server_fixL.go
+FixLength/fixL_test.go
 
 实现效果
 ```bash
@@ -45,7 +48,9 @@ received msg from client, the msg is  3bbbbb the length of msg is  1000
 
 > 以特殊字符结尾
 
-server_delimiter.go 为代码实现
+实现代码：
+Delimiter/server_delimiter.go
+Delimiter/delimiter_test.go
 
 实现效果
 ```bash
@@ -64,3 +69,19 @@ received msg from client, the msg is  3bbbbb
 ```
 
 ### Length field based frame decoder
+
+> 将请求的数据封装为两部分：数据头+数据正文，在数据头中存储正文的大小，当读取的数据小于数据头中的大小时，继续读取数据，指导读取的数据长度等于数据头中的长度时才停止。
+
+实现代码：
+LengthField/server_lengthField.go
+LengthField/lengthField_test.go
+
+实现效果：
+```bash
+received msg from client, the msg is  aaaa the length of msg is  4
+received msg from client, the msg is  bbbbb the length of msg is  5
+received msg from client, the msg is  aaaa the length of msg is  4
+received msg from client, the msg is  bbbbb the length of msg is  5
+received msg from client, the msg is  aaaa the length of msg is  4
+received msg from client, the msg is  bbbbb the length of msg is  5
+```
