@@ -78,10 +78,10 @@ LengthField/lengthField_test.go
 
 实现效果：
 ```bash
-received msg from client, the msg is  aaaa the length of msg is  4
-received msg from client, the msg is  bbbbb the length of msg is  5
-received msg from client, the msg is  aaaa the length of msg is  4
-received msg from client, the msg is  bbbbb the length of msg is  5
-received msg from client, the msg is  aaaa the length of msg is  4
-received msg from client, the msg is  bbbbb the length of msg is  5
+received msg from client, the msg is  1aaaa the length of msg is  5
+received msg from client, the msg is  1bbbbb the length of msg is  6
+received msg from client, the msg is  2aaaa the length of msg is  5
+received msg from client, the msg is  2bbbbb the length of msg is  6
+received msg from client, the msg is  3aaaa the length of msg is  5
+received msg from client, the msg is  3bbbbb the length of msg is  6
 ```

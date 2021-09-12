@@ -3,6 +3,7 @@ package LengthField
 import (
 	"log"
 	"net"
+	"strconv"
 	"testing"
 	"time"
 )
@@ -14,8 +15,8 @@ func TestLengthField(t *testing.T) {
 	}
 	defer c.Close()
 	for i := 1; i <= 3; i++ {
-		msg1 := []byte("4\naaaa")
-		msg2 := []byte("5\nbbbbb")
+		msg1 := []byte("5\n" + strconv.Itoa(i) + "aaaa")
+		msg2 := []byte("6\n" + strconv.Itoa(i) + "bbbbb")
 		c.Write(msg1)
 		c.Write(msg2)
 	}
